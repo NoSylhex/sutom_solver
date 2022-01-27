@@ -51,7 +51,7 @@ class Solver:
         stop_run = 'n'
         while stop_run.lower() == 'n' and len(self.verifier.words) > 1:
             self.round()
-            self.show_words()
+            self.show_words(min(10, len(self.verifier.words)))
             stop_run = input('Have you win already ?(y/n)')
         
         self.end_game()
